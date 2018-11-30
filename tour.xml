@@ -132,7 +132,8 @@
 
 
 	<!-- startup action - load the first scene -->
-	<action name="startup" autorun="onstart">
+	<action name="mobilescale" autorun="preinit" devices="mobile" >
+    mul(stagescale,0.7);
 	    Hide_Furnish_hotspot();
         Hide_Dim_hotspot();
 		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
